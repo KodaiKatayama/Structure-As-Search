@@ -1,0 +1,423 @@
+Epoch   1: LR=1.33e-04, Train Loss=1046.2088, Train Length=1046.21, Val Length=875.12
+★ New best model! Val Length: 875.12
+Epoch   2: LR=2.67e-04, Train Loss=840.1348, Train Length=840.13, Val Length=814.84
+★ New best model! Val Length: 814.84
+Epoch   3: LR=4.00e-04, Train Loss=768.8271, Train Length=768.83, Val Length=773.40
+★ New best model! Val Length: 773.40
+Epoch   4: LR=5.33e-04, Train Loss=737.3008, Train Length=737.30, Val Length=743.04
+★ New best model! Val Length: 743.04
+Epoch   5: LR=6.67e-04, Train Loss=686.5485, Train Length=686.55, Val Length=731.51
+★ New best model! Val Length: 731.51
+Epoch   6: LR=8.00e-04, Train Loss=673.6101, Train Length=673.61, Val Length=720.65
+★ New best model! Val Length: 720.65
+Epoch   7: LR=9.33e-04, Train Loss=669.0815, Train Length=669.08, Val Length=718.87
+★ New best model! Val Length: 718.87
+Epoch   8: LR=1.07e-03, Train Loss=664.6900, Train Length=664.69, Val Length=707.27
+★ New best model! Val Length: 707.27
+Epoch   9: LR=1.20e-03, Train Loss=659.4641, Train Length=659.46, Val Length=707.90
+Epoch  10: LR=1.33e-03, Train Loss=655.0356, Train Length=655.04, Val Length=709.56
+Epoch  11: LR=1.47e-03, Train Loss=651.8559, Train Length=651.86, Val Length=700.16
+★ New best model! Val Length: 700.16
+Epoch  12: LR=1.60e-03, Train Loss=649.3280, Train Length=649.33, Val Length=702.74
+Epoch  13: LR=1.73e-03, Train Loss=646.3519, Train Length=646.35, Val Length=698.50
+★ New best model! Val Length: 698.50
+Epoch  14: LR=1.87e-03, Train Loss=644.6681, Train Length=644.67, Val Length=693.74
+★ New best model! Val Length: 693.74
+Epoch  15: LR=2.00e-03, Train Loss=641.8118, Train Length=641.81, Val Length=693.96
+Epoch  16: LR=2.00e-03, Train Loss=639.4220, Train Length=639.42, Val Length=691.74
+★ New best model! Val Length: 691.74
+Epoch  17: LR=2.00e-03, Train Loss=637.7303, Train Length=637.73, Val Length=693.13
+Epoch  18: LR=2.00e-03, Train Loss=635.7201, Train Length=635.72, Val Length=692.07
+Epoch  19: LR=2.00e-03, Train Loss=633.2981, Train Length=633.30, Val Length=688.52
+★ New best model! Val Length: 688.52
+Epoch  20: LR=2.00e-03, Train Loss=632.0670, Train Length=632.07, Val Length=692.69
+Epoch  21: LR=2.00e-03, Train Loss=630.3710, Train Length=630.37, Val Length=694.40
+Epoch  22: LR=2.00e-03, Train Loss=630.0243, Train Length=630.02, Val Length=687.22
+★ New best model! Val Length: 687.22
+Epoch  23: LR=2.00e-03, Train Loss=628.4086, Train Length=628.41, Val Length=685.27
+★ New best model! Val Length: 685.27
+Epoch  24: LR=2.00e-03, Train Loss=627.3885, Train Length=627.39, Val Length=691.02
+Epoch  25: LR=2.00e-03, Train Loss=626.4832, Train Length=626.48, Val Length=687.23
+Epoch  26: LR=2.00e-03, Train Loss=625.4717, Train Length=625.47, Val Length=685.21
+★ New best model! Val Length: 685.21
+Epoch  27: LR=2.00e-03, Train Loss=625.3878, Train Length=625.39, Val Length=688.56
+Epoch  28: LR=2.00e-03, Train Loss=624.5923, Train Length=624.59, Val Length=688.53
+Epoch  29: LR=2.00e-03, Train Loss=623.5091, Train Length=623.51, Val Length=684.31
+★ New best model! Val Length: 684.31
+Epoch  30: LR=2.00e-03, Train Loss=622.7978, Train Length=622.80, Val Length=682.17
+★ New best model! Val Length: 682.17
+Epoch  31: LR=2.00e-03, Train Loss=622.2385, Train Length=622.24, Val Length=681.91
+★ New best model! Val Length: 681.91
+Epoch  32: LR=2.00e-03, Train Loss=621.6337, Train Length=621.63, Val Length=688.53
+Epoch  33: LR=2.00e-03, Train Loss=620.9633, Train Length=620.96, Val Length=680.45
+★ New best model! Val Length: 680.45
+Epoch  34: LR=2.00e-03, Train Loss=620.6375, Train Length=620.64, Val Length=680.41
+★ New best model! Val Length: 680.41
+Epoch  35: LR=1.99e-03, Train Loss=619.9395, Train Length=619.94, Val Length=683.57
+Epoch  36: LR=1.99e-03, Train Loss=619.0997, Train Length=619.10, Val Length=684.91
+Epoch  37: LR=1.99e-03, Train Loss=618.9110, Train Length=618.91, Val Length=679.34
+★ New best model! Val Length: 679.34
+Epoch  38: LR=1.99e-03, Train Loss=617.9973, Train Length=618.00, Val Length=675.89
+★ New best model! Val Length: 675.89
+Epoch  39: LR=1.99e-03, Train Loss=617.7473, Train Length=617.75, Val Length=675.77
+★ New best model! Val Length: 675.77
+Epoch  40: LR=1.99e-03, Train Loss=617.7933, Train Length=617.79, Val Length=673.92
+★ New best model! Val Length: 673.92
+Epoch  41: LR=1.99e-03, Train Loss=616.4057, Train Length=616.41, Val Length=673.03
+★ New best model! Val Length: 673.03
+Epoch  42: LR=1.99e-03, Train Loss=616.0486, Train Length=616.05, Val Length=685.50
+Epoch  43: LR=1.99e-03, Train Loss=615.8715, Train Length=615.87, Val Length=677.54
+Epoch  44: LR=1.99e-03, Train Loss=615.6769, Train Length=615.68, Val Length=680.45
+Epoch  45: LR=1.99e-03, Train Loss=614.6390, Train Length=614.64, Val Length=675.47
+Epoch  46: LR=1.99e-03, Train Loss=614.4755, Train Length=614.48, Val Length=675.33
+Epoch  47: LR=1.99e-03, Train Loss=614.1412, Train Length=614.14, Val Length=678.47
+Epoch  48: LR=1.99e-03, Train Loss=613.5243, Train Length=613.52, Val Length=676.61
+Epoch  49: LR=1.98e-03, Train Loss=613.1243, Train Length=613.12, Val Length=673.15
+Epoch  50: LR=1.98e-03, Train Loss=612.7261, Train Length=612.73, Val Length=676.90
+Epoch  51: LR=1.98e-03, Train Loss=612.0894, Train Length=612.09, Val Length=674.60
+Epoch  52: LR=1.98e-03, Train Loss=611.7480, Train Length=611.75, Val Length=678.44
+Epoch  53: LR=1.98e-03, Train Loss=611.4899, Train Length=611.49, Val Length=671.35
+★ New best model! Val Length: 671.35
+Epoch  54: LR=1.98e-03, Train Loss=611.0490, Train Length=611.05, Val Length=671.16
+★ New best model! Val Length: 671.16
+Epoch  55: LR=1.98e-03, Train Loss=610.4081, Train Length=610.41, Val Length=671.22
+Epoch  56: LR=1.98e-03, Train Loss=610.0743, Train Length=610.07, Val Length=673.52
+Epoch  57: LR=1.98e-03, Train Loss=609.6879, Train Length=609.69, Val Length=676.55
+Epoch  58: LR=1.97e-03, Train Loss=609.2501, Train Length=609.25, Val Length=672.20
+Epoch  59: LR=1.97e-03, Train Loss=608.9142, Train Length=608.91, Val Length=681.61
+Epoch  60: LR=1.97e-03, Train Loss=608.7340, Train Length=608.73, Val Length=681.75
+Epoch  61: LR=1.97e-03, Train Loss=608.4689, Train Length=608.47, Val Length=673.31
+Epoch  62: LR=1.97e-03, Train Loss=607.9595, Train Length=607.96, Val Length=672.17
+Epoch  63: LR=1.97e-03, Train Loss=607.7181, Train Length=607.72, Val Length=672.36
+Epoch  64: LR=1.97e-03, Train Loss=607.1334, Train Length=607.13, Val Length=667.07
+★ New best model! Val Length: 667.07
+Epoch  65: LR=1.97e-03, Train Loss=606.6316, Train Length=606.63, Val Length=670.55
+Epoch  66: LR=1.96e-03, Train Loss=606.7934, Train Length=606.79, Val Length=671.95
+Epoch  67: LR=1.96e-03, Train Loss=605.9817, Train Length=605.98, Val Length=667.83
+Epoch  68: LR=1.96e-03, Train Loss=605.7545, Train Length=605.75, Val Length=668.20
+Epoch  69: LR=1.96e-03, Train Loss=605.6785, Train Length=605.68, Val Length=672.33
+Epoch  70: LR=1.96e-03, Train Loss=605.2426, Train Length=605.24, Val Length=663.85
+★ New best model! Val Length: 663.85
+Epoch  71: LR=1.96e-03, Train Loss=605.2079, Train Length=605.21, Val Length=681.38
+Epoch  72: LR=1.96e-03, Train Loss=604.7089, Train Length=604.71, Val Length=664.02
+Epoch  73: LR=1.95e-03, Train Loss=604.3321, Train Length=604.33, Val Length=666.67
+Epoch  74: LR=1.95e-03, Train Loss=604.1382, Train Length=604.14, Val Length=674.64
+Epoch  75: LR=1.95e-03, Train Loss=603.9921, Train Length=603.99, Val Length=664.83
+Epoch  76: LR=1.95e-03, Train Loss=603.6573, Train Length=603.66, Val Length=673.22
+Epoch  77: LR=1.95e-03, Train Loss=603.1934, Train Length=603.19, Val Length=663.08
+★ New best model! Val Length: 663.08
+Epoch  78: LR=1.95e-03, Train Loss=603.2269, Train Length=603.23, Val Length=670.37
+Epoch  79: LR=1.94e-03, Train Loss=602.9261, Train Length=602.93, Val Length=664.95
+Epoch  80: LR=1.94e-03, Train Loss=602.8990, Train Length=602.90, Val Length=663.02
+★ New best model! Val Length: 663.02
+Epoch  81: LR=1.94e-03, Train Loss=602.1809, Train Length=602.18, Val Length=665.26
+Epoch  82: LR=1.94e-03, Train Loss=602.1536, Train Length=602.15, Val Length=659.54
+★ New best model! Val Length: 659.54
+Epoch  83: LR=1.94e-03, Train Loss=601.9825, Train Length=601.98, Val Length=661.98
+Epoch  84: LR=1.93e-03, Train Loss=601.6900, Train Length=601.69, Val Length=664.02
+Epoch  85: LR=1.93e-03, Train Loss=601.4311, Train Length=601.43, Val Length=661.59
+Epoch  86: LR=1.93e-03, Train Loss=601.1295, Train Length=601.13, Val Length=662.49
+Epoch  87: LR=1.93e-03, Train Loss=601.0277, Train Length=601.03, Val Length=662.06
+Epoch  88: LR=1.93e-03, Train Loss=601.0009, Train Length=601.00, Val Length=665.07
+Epoch  89: LR=1.92e-03, Train Loss=600.7486, Train Length=600.75, Val Length=664.15
+Epoch  90: LR=1.92e-03, Train Loss=600.7705, Train Length=600.77, Val Length=659.88
+Epoch  91: LR=1.92e-03, Train Loss=600.2192, Train Length=600.22, Val Length=657.74
+★ New best model! Val Length: 657.74
+Epoch  92: LR=1.92e-03, Train Loss=599.9346, Train Length=599.93, Val Length=661.41
+Epoch  93: LR=1.92e-03, Train Loss=599.7580, Train Length=599.76, Val Length=666.60
+Epoch  94: LR=1.91e-03, Train Loss=599.9514, Train Length=599.95, Val Length=662.44
+Epoch  95: LR=1.91e-03, Train Loss=599.7693, Train Length=599.77, Val Length=670.39
+Epoch  96: LR=1.91e-03, Train Loss=599.4495, Train Length=599.45, Val Length=661.91
+Epoch  97: LR=1.91e-03, Train Loss=599.5148, Train Length=599.51, Val Length=661.00
+Epoch  98: LR=1.90e-03, Train Loss=599.0571, Train Length=599.06, Val Length=661.69
+Epoch  99: LR=1.90e-03, Train Loss=598.8318, Train Length=598.83, Val Length=660.14
+Epoch 100: LR=1.90e-03, Train Loss=598.8224, Train Length=598.82, Val Length=657.58
+★ New best model! Val Length: 657.58
+Epoch 101: LR=1.90e-03, Train Loss=599.0653, Train Length=599.07, Val Length=661.16
+Epoch 102: LR=1.90e-03, Train Loss=598.4966, Train Length=598.50, Val Length=675.14
+Epoch 103: LR=1.89e-03, Train Loss=598.4009, Train Length=598.40, Val Length=665.38
+Epoch 104: LR=1.89e-03, Train Loss=598.3564, Train Length=598.36, Val Length=660.20
+Epoch 105: LR=1.89e-03, Train Loss=597.9938, Train Length=597.99, Val Length=668.52
+Epoch 106: LR=1.89e-03, Train Loss=598.0532, Train Length=598.05, Val Length=657.30
+★ New best model! Val Length: 657.30
+Epoch 107: LR=1.88e-03, Train Loss=597.8458, Train Length=597.85, Val Length=656.95
+★ New best model! Val Length: 656.95
+Epoch 108: LR=1.88e-03, Train Loss=597.5180, Train Length=597.52, Val Length=657.32
+Epoch 109: LR=1.88e-03, Train Loss=597.9238, Train Length=597.92, Val Length=659.29
+Epoch 110: LR=1.88e-03, Train Loss=597.4835, Train Length=597.48, Val Length=657.73
+Epoch 111: LR=1.87e-03, Train Loss=597.6036, Train Length=597.60, Val Length=656.37
+★ New best model! Val Length: 656.37
+Epoch 112: LR=1.87e-03, Train Loss=597.2407, Train Length=597.24, Val Length=658.64
+Epoch 113: LR=1.87e-03, Train Loss=597.1043, Train Length=597.10, Val Length=659.11
+Epoch 114: LR=1.86e-03, Train Loss=597.4637, Train Length=597.46, Val Length=655.34
+★ New best model! Val Length: 655.34
+Epoch 115: LR=1.86e-03, Train Loss=596.8044, Train Length=596.80, Val Length=677.21
+Epoch 116: LR=1.86e-03, Train Loss=596.8072, Train Length=596.81, Val Length=661.84
+Epoch 117: LR=1.86e-03, Train Loss=596.6018, Train Length=596.60, Val Length=658.64
+Epoch 118: LR=1.85e-03, Train Loss=596.6305, Train Length=596.63, Val Length=676.62
+Epoch 119: LR=1.85e-03, Train Loss=596.5091, Train Length=596.51, Val Length=663.42
+Epoch 120: LR=1.85e-03, Train Loss=596.7309, Train Length=596.73, Val Length=656.20
+Epoch 121: LR=1.85e-03, Train Loss=596.1647, Train Length=596.16, Val Length=663.12
+Epoch 122: LR=1.84e-03, Train Loss=596.0840, Train Length=596.08, Val Length=657.05
+Epoch 123: LR=1.84e-03, Train Loss=595.9212, Train Length=595.92, Val Length=660.23
+Epoch 124: LR=1.84e-03, Train Loss=596.2591, Train Length=596.26, Val Length=654.95
+★ New best model! Val Length: 654.95
+Epoch 125: LR=1.83e-03, Train Loss=595.8632, Train Length=595.86, Val Length=658.86
+Epoch 126: LR=1.83e-03, Train Loss=595.8212, Train Length=595.82, Val Length=653.24
+★ New best model! Val Length: 653.24
+Epoch 127: LR=1.83e-03, Train Loss=595.7724, Train Length=595.77, Val Length=658.37
+Epoch 128: LR=1.82e-03, Train Loss=595.6309, Train Length=595.63, Val Length=658.18
+Epoch 129: LR=1.82e-03, Train Loss=595.3697, Train Length=595.37, Val Length=657.90
+Epoch 130: LR=1.82e-03, Train Loss=595.2775, Train Length=595.28, Val Length=657.38
+Epoch 131: LR=1.82e-03, Train Loss=595.2697, Train Length=595.27, Val Length=656.40
+Epoch 132: LR=1.81e-03, Train Loss=595.2855, Train Length=595.29, Val Length=663.25
+Epoch 133: LR=1.81e-03, Train Loss=595.4189, Train Length=595.42, Val Length=662.89
+Epoch 134: LR=1.81e-03, Train Loss=595.0860, Train Length=595.09, Val Length=656.76
+Epoch 135: LR=1.80e-03, Train Loss=594.7190, Train Length=594.72, Val Length=658.66
+Epoch 136: LR=1.80e-03, Train Loss=595.1194, Train Length=595.12, Val Length=653.17
+★ New best model! Val Length: 653.17
+Epoch 137: LR=1.80e-03, Train Loss=594.8364, Train Length=594.84, Val Length=673.50
+Epoch 138: LR=1.79e-03, Train Loss=594.8601, Train Length=594.86, Val Length=658.35
+Epoch 139: LR=1.79e-03, Train Loss=594.5800, Train Length=594.58, Val Length=658.43
+Epoch 140: LR=1.79e-03, Train Loss=594.3086, Train Length=594.31, Val Length=658.04
+Epoch 141: LR=1.78e-03, Train Loss=594.4942, Train Length=594.49, Val Length=657.33
+Epoch 142: LR=1.78e-03, Train Loss=594.7142, Train Length=594.71, Val Length=655.41
+Epoch 143: LR=1.78e-03, Train Loss=594.2078, Train Length=594.21, Val Length=660.10
+Epoch 144: LR=1.77e-03, Train Loss=594.2693, Train Length=594.27, Val Length=661.33
+Epoch 145: LR=1.77e-03, Train Loss=594.2801, Train Length=594.28, Val Length=669.19
+Epoch 146: LR=1.77e-03, Train Loss=593.9449, Train Length=593.94, Val Length=656.15
+Epoch 147: LR=1.76e-03, Train Loss=594.3919, Train Length=594.39, Val Length=658.92
+Epoch 148: LR=1.76e-03, Train Loss=593.7731, Train Length=593.77, Val Length=654.85
+Epoch 149: LR=1.76e-03, Train Loss=593.7995, Train Length=593.80, Val Length=655.03
+Epoch 150: LR=1.75e-03, Train Loss=593.7614, Train Length=593.76, Val Length=656.16
+Epoch 151: LR=1.75e-03, Train Loss=593.6525, Train Length=593.65, Val Length=654.37
+Epoch 152: LR=1.75e-03, Train Loss=593.8384, Train Length=593.84, Val Length=657.80
+Epoch 153: LR=1.74e-03, Train Loss=593.6057, Train Length=593.61, Val Length=653.69
+Epoch 154: LR=1.74e-03, Train Loss=593.4031, Train Length=593.40, Val Length=660.57
+Epoch 155: LR=1.73e-03, Train Loss=593.6200, Train Length=593.62, Val Length=658.05
+Epoch 156: LR=1.73e-03, Train Loss=593.0035, Train Length=593.00, Val Length=657.17
+Epoch 157: LR=1.73e-03, Train Loss=593.2476, Train Length=593.25, Val Length=657.63
+Epoch 158: LR=1.72e-03, Train Loss=593.3452, Train Length=593.35, Val Length=655.70
+Epoch 159: LR=1.72e-03, Train Loss=592.9253, Train Length=592.93, Val Length=659.35
+Epoch 160: LR=1.72e-03, Train Loss=593.1207, Train Length=593.12, Val Length=655.29
+Epoch 161: LR=1.71e-03, Train Loss=593.1223, Train Length=593.12, Val Length=658.62
+Epoch 162: LR=1.71e-03, Train Loss=593.0799, Train Length=593.08, Val Length=652.98
+★ New best model! Val Length: 652.98
+Epoch 163: LR=1.70e-03, Train Loss=592.9893, Train Length=592.99, Val Length=653.70
+Epoch 164: LR=1.70e-03, Train Loss=592.8278, Train Length=592.83, Val Length=651.91
+★ New best model! Val Length: 651.91
+Epoch 165: LR=1.70e-03, Train Loss=592.9587, Train Length=592.96, Val Length=654.37
+Epoch 166: LR=1.69e-03, Train Loss=592.9806, Train Length=592.98, Val Length=654.78
+Epoch 167: LR=1.69e-03, Train Loss=592.4546, Train Length=592.45, Val Length=652.45
+Epoch 168: LR=1.69e-03, Train Loss=592.5362, Train Length=592.54, Val Length=656.21
+Epoch 169: LR=1.68e-03, Train Loss=592.5251, Train Length=592.53, Val Length=658.78
+Epoch 170: LR=1.68e-03, Train Loss=592.5228, Train Length=592.52, Val Length=663.47
+Epoch 171: LR=1.67e-03, Train Loss=592.3996, Train Length=592.40, Val Length=657.00
+Epoch 172: LR=1.67e-03, Train Loss=592.4830, Train Length=592.48, Val Length=652.13
+Epoch 173: LR=1.67e-03, Train Loss=592.2643, Train Length=592.26, Val Length=654.52
+Epoch 174: LR=1.66e-03, Train Loss=592.4084, Train Length=592.41, Val Length=659.16
+Epoch 175: LR=1.66e-03, Train Loss=592.0300, Train Length=592.03, Val Length=655.81
+Epoch 176: LR=1.65e-03, Train Loss=591.7538, Train Length=591.75, Val Length=657.29
+Epoch 177: LR=1.65e-03, Train Loss=592.2571, Train Length=592.26, Val Length=657.40
+Epoch 178: LR=1.65e-03, Train Loss=592.0473, Train Length=592.05, Val Length=655.64
+Epoch 179: LR=1.64e-03, Train Loss=591.9127, Train Length=591.91, Val Length=652.92
+Epoch 180: LR=1.64e-03, Train Loss=591.7213, Train Length=591.72, Val Length=656.82
+Epoch 181: LR=1.63e-03, Train Loss=591.7579, Train Length=591.76, Val Length=654.13
+Epoch 182: LR=1.63e-03, Train Loss=591.7859, Train Length=591.79, Val Length=657.36
+Epoch 183: LR=1.62e-03, Train Loss=591.5144, Train Length=591.51, Val Length=652.46
+Epoch 184: LR=1.62e-03, Train Loss=591.4930, Train Length=591.49, Val Length=654.57
+Epoch 185: LR=1.62e-03, Train Loss=591.6641, Train Length=591.66, Val Length=652.63
+Epoch 186: LR=1.61e-03, Train Loss=591.5310, Train Length=591.53, Val Length=667.64
+Epoch 187: LR=1.61e-03, Train Loss=591.4875, Train Length=591.49, Val Length=653.57
+Epoch 188: LR=1.60e-03, Train Loss=591.3836, Train Length=591.38, Val Length=658.16
+Epoch 189: LR=1.60e-03, Train Loss=591.5288, Train Length=591.53, Val Length=651.33
+★ New best model! Val Length: 651.33
+Epoch 190: LR=1.59e-03, Train Loss=591.2149, Train Length=591.21, Val Length=655.15
+Epoch 191: LR=1.59e-03, Train Loss=591.4642, Train Length=591.46, Val Length=656.95
+Epoch 192: LR=1.59e-03, Train Loss=591.5607, Train Length=591.56, Val Length=659.89
+Epoch 193: LR=1.58e-03, Train Loss=591.1658, Train Length=591.17, Val Length=653.74
+Epoch 194: LR=1.58e-03, Train Loss=591.0960, Train Length=591.10, Val Length=652.28
+Epoch 195: LR=1.57e-03, Train Loss=591.1677, Train Length=591.17, Val Length=652.60
+Epoch 196: LR=1.57e-03, Train Loss=591.1717, Train Length=591.17, Val Length=659.51
+Epoch 197: LR=1.56e-03, Train Loss=590.9773, Train Length=590.98, Val Length=652.72
+Epoch 198: LR=1.56e-03, Train Loss=590.6554, Train Length=590.66, Val Length=662.39
+Epoch 199: LR=1.55e-03, Train Loss=590.9342, Train Length=590.93, Val Length=652.53
+Epoch 200: LR=1.55e-03, Train Loss=590.7503, Train Length=590.75, Val Length=651.34
+Epoch 201: LR=1.55e-03, Train Loss=590.6989, Train Length=590.70, Val Length=656.55
+Epoch 202: LR=1.54e-03, Train Loss=590.9152, Train Length=590.92, Val Length=653.32
+Epoch 203: LR=1.54e-03, Train Loss=590.6725, Train Length=590.67, Val Length=652.09
+Epoch 204: LR=1.53e-03, Train Loss=590.5815, Train Length=590.58, Val Length=655.64
+Epoch 205: LR=1.53e-03, Train Loss=590.3636, Train Length=590.36, Val Length=655.29
+Epoch 206: LR=1.52e-03, Train Loss=590.6763, Train Length=590.68, Val Length=651.54
+Epoch 207: LR=1.52e-03, Train Loss=590.4488, Train Length=590.45, Val Length=656.35
+Epoch 208: LR=1.51e-03, Train Loss=590.3309, Train Length=590.33, Val Length=651.88
+Epoch 209: LR=1.51e-03, Train Loss=590.4420, Train Length=590.44, Val Length=653.17
+Epoch 210: LR=1.50e-03, Train Loss=590.2603, Train Length=590.26, Val Length=651.72
+Epoch 211: LR=1.50e-03, Train Loss=590.1708, Train Length=590.17, Val Length=656.52
+Epoch 212: LR=1.50e-03, Train Loss=590.2561, Train Length=590.26, Val Length=653.26
+Epoch 213: LR=1.49e-03, Train Loss=590.2665, Train Length=590.27, Val Length=653.98
+Epoch 214: LR=1.49e-03, Train Loss=590.4203, Train Length=590.42, Val Length=653.97
+Epoch 215: LR=1.48e-03, Train Loss=590.1489, Train Length=590.15, Val Length=653.38
+Epoch 216: LR=1.48e-03, Train Loss=590.0581, Train Length=590.06, Val Length=652.99
+Epoch 217: LR=1.47e-03, Train Loss=589.9113, Train Length=589.91, Val Length=652.32
+Epoch 218: LR=1.47e-03, Train Loss=590.0586, Train Length=590.06, Val Length=651.85
+Epoch 219: LR=1.46e-03, Train Loss=590.2208, Train Length=590.22, Val Length=657.49
+Epoch 220: LR=1.46e-03, Train Loss=589.9300, Train Length=589.93, Val Length=653.77
+Epoch 221: LR=1.45e-03, Train Loss=589.8476, Train Length=589.85, Val Length=663.06
+Epoch 222: LR=1.45e-03, Train Loss=589.7536, Train Length=589.75, Val Length=652.43
+Epoch 223: LR=1.44e-03, Train Loss=589.6946, Train Length=589.69, Val Length=661.98
+Epoch 224: LR=1.44e-03, Train Loss=589.5503, Train Length=589.55, Val Length=655.67
+Epoch 225: LR=1.43e-03, Train Loss=589.7507, Train Length=589.75, Val Length=655.70
+Epoch 226: LR=1.43e-03, Train Loss=589.6496, Train Length=589.65, Val Length=655.04
+Epoch 227: LR=1.42e-03, Train Loss=589.7346, Train Length=589.73, Val Length=653.82
+Epoch 228: LR=1.42e-03, Train Loss=589.3855, Train Length=589.39, Val Length=654.27
+Epoch 229: LR=1.41e-03, Train Loss=589.2465, Train Length=589.25, Val Length=656.30
+Epoch 230: LR=1.41e-03, Train Loss=589.4778, Train Length=589.48, Val Length=651.81
+Epoch 231: LR=1.40e-03, Train Loss=589.4352, Train Length=589.44, Val Length=668.00
+Epoch 232: LR=1.40e-03, Train Loss=589.5863, Train Length=589.59, Val Length=652.12
+Epoch 233: LR=1.39e-03, Train Loss=589.1861, Train Length=589.19, Val Length=651.07
+★ New best model! Val Length: 651.07
+Epoch 234: LR=1.39e-03, Train Loss=589.3466, Train Length=589.35, Val Length=658.12
+Epoch 235: LR=1.38e-03, Train Loss=589.3071, Train Length=589.31, Val Length=661.48
+Epoch 236: LR=1.38e-03, Train Loss=589.2056, Train Length=589.21, Val Length=651.08
+Epoch 237: LR=1.37e-03, Train Loss=588.9822, Train Length=588.98, Val Length=652.43
+Epoch 238: LR=1.37e-03, Train Loss=589.1383, Train Length=589.14, Val Length=654.06
+Epoch 239: LR=1.36e-03, Train Loss=589.2527, Train Length=589.25, Val Length=652.47
+Epoch 240: LR=1.36e-03, Train Loss=588.8352, Train Length=588.84, Val Length=659.74
+Epoch 241: LR=1.35e-03, Train Loss=589.2323, Train Length=589.23, Val Length=652.84
+Epoch 242: LR=1.35e-03, Train Loss=588.7370, Train Length=588.74, Val Length=657.56
+Epoch 243: LR=1.34e-03, Train Loss=588.9758, Train Length=588.98, Val Length=650.36
+★ New best model! Val Length: 650.36
+Epoch 244: LR=1.34e-03, Train Loss=589.1231, Train Length=589.12, Val Length=651.60
+Epoch 245: LR=1.33e-03, Train Loss=588.6426, Train Length=588.64, Val Length=649.98
+★ New best model! Val Length: 649.98
+Epoch 246: LR=1.33e-03, Train Loss=588.9471, Train Length=588.95, Val Length=651.08
+Epoch 247: LR=1.32e-03, Train Loss=588.5448, Train Length=588.54, Val Length=650.99
+Epoch 248: LR=1.32e-03, Train Loss=588.9833, Train Length=588.98, Val Length=654.69
+Epoch 249: LR=1.31e-03, Train Loss=588.6273, Train Length=588.63, Val Length=652.48
+Epoch 250: LR=1.31e-03, Train Loss=588.5406, Train Length=588.54, Val Length=649.93
+★ New best model! Val Length: 649.93
+Epoch 251: LR=1.30e-03, Train Loss=588.6141, Train Length=588.61, Val Length=651.83
+Epoch 252: LR=1.30e-03, Train Loss=588.5204, Train Length=588.52, Val Length=650.68
+Epoch 253: LR=1.29e-03, Train Loss=588.6097, Train Length=588.61, Val Length=653.47
+Epoch 254: LR=1.29e-03, Train Loss=588.4526, Train Length=588.45, Val Length=653.66
+Epoch 255: LR=1.28e-03, Train Loss=588.4584, Train Length=588.46, Val Length=651.23
+Epoch 256: LR=1.28e-03, Train Loss=588.3944, Train Length=588.39, Val Length=649.76
+★ New best model! Val Length: 649.76
+Epoch 257: LR=1.27e-03, Train Loss=588.4554, Train Length=588.46, Val Length=653.51
+Epoch 258: LR=1.27e-03, Train Loss=588.5163, Train Length=588.52, Val Length=653.10
+Epoch 259: LR=1.26e-03, Train Loss=588.2353, Train Length=588.24, Val Length=650.35
+Epoch 260: LR=1.26e-03, Train Loss=588.2176, Train Length=588.22, Val Length=649.51
+★ New best model! Val Length: 649.51
+Epoch 261: LR=1.25e-03, Train Loss=588.3190, Train Length=588.32, Val Length=655.52
+Epoch 262: LR=1.25e-03, Train Loss=588.1938, Train Length=588.19, Val Length=651.31
+Epoch 263: LR=1.24e-03, Train Loss=587.9102, Train Length=587.91, Val Length=651.54
+Epoch 264: LR=1.24e-03, Train Loss=588.0987, Train Length=588.10, Val Length=656.06
+Epoch 265: LR=1.23e-03, Train Loss=588.1179, Train Length=588.12, Val Length=655.90
+Epoch 266: LR=1.23e-03, Train Loss=587.8470, Train Length=587.85, Val Length=648.96
+★ New best model! Val Length: 648.96
+Epoch 267: LR=1.22e-03, Train Loss=587.8060, Train Length=587.81, Val Length=648.48
+★ New best model! Val Length: 648.48
+Epoch 268: LR=1.22e-03, Train Loss=587.8973, Train Length=587.90, Val Length=652.49
+Epoch 269: LR=1.21e-03, Train Loss=587.8613, Train Length=587.86, Val Length=652.16
+Epoch 270: LR=1.21e-03, Train Loss=587.8354, Train Length=587.84, Val Length=651.91
+Epoch 271: LR=1.20e-03, Train Loss=587.6991, Train Length=587.70, Val Length=649.81
+Epoch 272: LR=1.20e-03, Train Loss=587.5623, Train Length=587.56, Val Length=655.30
+Epoch 273: LR=1.19e-03, Train Loss=587.7583, Train Length=587.76, Val Length=651.67
+Epoch 274: LR=1.18e-03, Train Loss=587.6568, Train Length=587.66, Val Length=648.98
+Epoch 275: LR=1.18e-03, Train Loss=587.6505, Train Length=587.65, Val Length=652.22
+Epoch 276: LR=1.17e-03, Train Loss=587.6450, Train Length=587.65, Val Length=653.93
+Epoch 277: LR=1.17e-03, Train Loss=587.5695, Train Length=587.57, Val Length=655.53
+Epoch 278: LR=1.16e-03, Train Loss=587.5197, Train Length=587.52, Val Length=655.43
+Epoch 279: LR=1.16e-03, Train Loss=587.5545, Train Length=587.55, Val Length=648.18
+★ New best model! Val Length: 648.18
+Epoch 280: LR=1.15e-03, Train Loss=587.5128, Train Length=587.51, Val Length=650.33
+Epoch 281: LR=1.15e-03, Train Loss=587.4131, Train Length=587.41, Val Length=654.10
+Epoch 282: LR=1.14e-03, Train Loss=587.2651, Train Length=587.27, Val Length=653.94
+Epoch 283: LR=1.14e-03, Train Loss=587.2411, Train Length=587.24, Val Length=650.91
+Epoch 284: LR=1.13e-03, Train Loss=587.1367, Train Length=587.14, Val Length=653.12
+Epoch 285: LR=1.13e-03, Train Loss=587.2535, Train Length=587.25, Val Length=651.77
+Epoch 286: LR=1.12e-03, Train Loss=587.0816, Train Length=587.08, Val Length=652.64
+Epoch 287: LR=1.12e-03, Train Loss=587.2231, Train Length=587.22, Val Length=649.52
+Epoch 288: LR=1.11e-03, Train Loss=587.2813, Train Length=587.28, Val Length=652.35
+Epoch 289: LR=1.10e-03, Train Loss=587.1138, Train Length=587.11, Val Length=657.12
+Epoch 290: LR=1.10e-03, Train Loss=587.1137, Train Length=587.11, Val Length=648.96
+Epoch 291: LR=1.09e-03, Train Loss=586.9831, Train Length=586.98, Val Length=650.77
+Epoch 292: LR=1.09e-03, Train Loss=586.9325, Train Length=586.93, Val Length=648.54
+Epoch 293: LR=1.08e-03, Train Loss=586.9259, Train Length=586.93, Val Length=647.50
+★ New best model! Val Length: 647.50
+Epoch 294: LR=1.08e-03, Train Loss=586.8819, Train Length=586.88, Val Length=648.48
+Epoch 295: LR=1.07e-03, Train Loss=586.9146, Train Length=586.91, Val Length=648.69
+Epoch 296: LR=1.07e-03, Train Loss=586.8933, Train Length=586.89, Val Length=651.16
+Epoch 297: LR=1.06e-03, Train Loss=586.8580, Train Length=586.86, Val Length=653.04
+Epoch 298: LR=1.06e-03, Train Loss=586.7107, Train Length=586.71, Val Length=649.68
+Epoch 299: LR=1.05e-03, Train Loss=586.7585, Train Length=586.76, Val Length=651.42
+Epoch 300: LR=1.05e-03, Train Loss=586.9033, Train Length=586.90, Val Length=652.38
+Epoch 301: LR=1.04e-03, Train Loss=586.7056, Train Length=586.71, Val Length=650.16
+Epoch 302: LR=1.04e-03, Train Loss=586.5354, Train Length=586.54, Val Length=649.20
+Epoch 303: LR=1.03e-03, Train Loss=586.6251, Train Length=586.63, Val Length=650.05
+Epoch 304: LR=1.02e-03, Train Loss=586.5028, Train Length=586.50, Val Length=654.30
+Epoch 305: LR=1.02e-03, Train Loss=586.4915, Train Length=586.49, Val Length=653.03
+Epoch 306: LR=1.01e-03, Train Loss=586.4155, Train Length=586.42, Val Length=649.97
+Epoch 307: LR=1.01e-03, Train Loss=586.4862, Train Length=586.49, Val Length=647.79
+Epoch 308: LR=1.00e-03, Train Loss=586.2553, Train Length=586.26, Val Length=651.44
+Epoch 309: LR=9.98e-04, Train Loss=586.3091, Train Length=586.31, Val Length=649.46
+Epoch 310: LR=9.92e-04, Train Loss=586.3427, Train Length=586.34, Val Length=652.53
+Epoch 311: LR=9.87e-04, Train Loss=586.1801, Train Length=586.18, Val Length=653.81
+Epoch 312: LR=9.82e-04, Train Loss=586.2622, Train Length=586.26, Val Length=647.79
+Epoch 313: LR=9.76e-04, Train Loss=586.2317, Train Length=586.23, Val Length=646.64
+★ New best model! Val Length: 646.64
+Epoch 314: LR=9.71e-04, Train Loss=586.2175, Train Length=586.22, Val Length=648.66
+Epoch 315: LR=9.66e-04, Train Loss=586.1647, Train Length=586.16, Val Length=652.91
+Epoch 316: LR=9.60e-04, Train Loss=586.0570, Train Length=586.06, Val Length=649.80
+Epoch 317: LR=9.55e-04, Train Loss=585.9674, Train Length=585.97, Val Length=653.80
+Epoch 318: LR=9.50e-04, Train Loss=586.1054, Train Length=586.11, Val Length=649.39
+Epoch 319: LR=9.44e-04, Train Loss=586.5538, Train Length=586.55, Val Length=652.32
+Epoch 320: LR=9.39e-04, Train Loss=585.7941, Train Length=585.79, Val Length=652.96
+Epoch 321: LR=9.33e-04, Train Loss=585.8829, Train Length=585.88, Val Length=651.64
+Epoch 322: LR=9.28e-04, Train Loss=585.8326, Train Length=585.83, Val Length=648.92
+Epoch 323: LR=9.23e-04, Train Loss=585.8030, Train Length=585.80, Val Length=652.08
+Epoch 324: LR=9.17e-04, Train Loss=585.7169, Train Length=585.72, Val Length=653.60
+Epoch 325: LR=9.12e-04, Train Loss=585.7521, Train Length=585.75, Val Length=650.45
+Epoch 326: LR=9.07e-04, Train Loss=585.8470, Train Length=585.85, Val Length=649.15
+Epoch 327: LR=9.01e-04, Train Loss=585.6252, Train Length=585.63, Val Length=648.60
+Epoch 328: LR=8.96e-04, Train Loss=585.5726, Train Length=585.57, Val Length=650.05
+Epoch 329: LR=8.91e-04, Train Loss=585.7561, Train Length=585.76, Val Length=649.70
+Epoch 330: LR=8.85e-04, Train Loss=585.7006, Train Length=585.70, Val Length=652.04
+Epoch 331: LR=8.80e-04, Train Loss=585.5238, Train Length=585.52, Val Length=653.12
+Epoch 332: LR=8.75e-04, Train Loss=585.3252, Train Length=585.33, Val Length=652.14
+Epoch 333: LR=8.69e-04, Train Loss=585.6489, Train Length=585.65, Val Length=649.00
+Epoch 334: LR=8.64e-04, Train Loss=585.3118, Train Length=585.31, Val Length=649.45
+Epoch 335: LR=8.59e-04, Train Loss=585.3722, Train Length=585.37, Val Length=650.00
+Epoch 336: LR=8.53e-04, Train Loss=585.2827, Train Length=585.28, Val Length=649.66
+Epoch 337: LR=8.48e-04, Train Loss=585.3111, Train Length=585.31, Val Length=651.48
+Epoch 338: LR=8.43e-04, Train Loss=585.2679, Train Length=585.27, Val Length=650.20
+Epoch 339: LR=8.38e-04, Train Loss=585.2755, Train Length=585.28, Val Length=647.72
+Epoch 340: LR=8.32e-04, Train Loss=585.1449, Train Length=585.14, Val Length=650.37
+Epoch 341: LR=8.27e-04, Train Loss=585.2772, Train Length=585.28, Val Length=649.19
+Epoch 342: LR=8.22e-04, Train Loss=585.1036, Train Length=585.10, Val Length=650.11
+Epoch 343: LR=8.16e-04, Train Loss=585.0832, Train Length=585.08, Val Length=649.98
+Epoch 344: LR=8.11e-04, Train Loss=585.0426, Train Length=585.04, Val Length=649.07
+Epoch 345: LR=8.06e-04, Train Loss=584.9701, Train Length=584.97, Val Length=649.70
+Epoch 346: LR=8.01e-04, Train Loss=585.0423, Train Length=585.04, Val Length=650.15
+Epoch 347: LR=7.95e-04, Train Loss=585.0794, Train Length=585.08, Val Length=649.61
+Epoch 348: LR=7.90e-04, Train Loss=584.9288, Train Length=584.93, Val Length=659.88
+Epoch 349: LR=7.85e-04, Train Loss=584.8247, Train Length=584.82, Val Length=649.82
+Epoch 350: LR=7.80e-04, Train Loss=584.8334, Train Length=584.83, Val Length=653.32
+Epoch 351: LR=7.74e-04, Train Loss=584.7972, Train Length=584.80, Val Length=648.87
+Epoch 352: LR=7.69e-04, Train Loss=584.7175, Train Length=584.72, Val Length=648.11
+Epoch 353: LR=7.64e-04, Train Loss=584.6320, Train Length=584.63, Val Length=649.96
+Epoch 354: LR=7.59e-04, Train Loss=584.7649, Train Length=584.76, Val Length=647.59
+Epoch 355: LR=7.53e-04, Train Loss=584.6644, Train Length=584.66, Val Length=648.33
+Epoch 356: LR=7.48e-04, Train Loss=584.6768, Train Length=584.68, Val Length=648.56
+Epoch 357: LR=7.43e-04, Train Loss=584.6133, Train Length=584.61, Val Length=648.08
+Epoch 358: LR=7.38e-04, Train Loss=584.6859, Train Length=584.69, Val Length=649.45
+Epoch 359: LR=7.33e-04, Train Loss=584.5840, Train Length=584.58, Val Length=650.34
+Epoch 360: LR=7.28e-04, Train Loss=584.4868, Train Length=584.49, Val Length=649.84
+Epoch 361: LR=7.22e-04, Train Loss=584.4262, Train Length=584.43, Val Length=651.14
+Epoch 362: LR=7.17e-04, Train Loss=584.4039, Train Length=584.40, Val Length=651.26
+Epoch 363: LR=7.12e-04, Train Loss=584.4757, Train Length=584.48, Val Length=654.77
+Early stopping triggered at epoch 363
+Best validation length: 646.64
+Training completed!
+Best validation length: 646.64
