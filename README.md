@@ -3,7 +3,7 @@
 > A PyTorch implementation of **Structure-As-Search**, a fully unsupervised, non-autoregressive framework for solving the Traveling Salesman Problem (TSP).
 
 
-##  TSP-50 Inference Demonstration
+## TSP-50 Inference Demonstration
 
 This example demonstrates inference on 50-node TSP instances using the **Structure-As-Search** model.
 
@@ -16,7 +16,7 @@ The ensemble method is based on 20 coprime shifts of the cyclic Hamiltonian matr
 
 Each coprime defines a distinct Hamiltonian cycle topology used to train a separate model variant.
 
-### Training
+- ### Training
 
 To train on 50-node TSP instances, use the provided SLURM batch script:
 
@@ -24,7 +24,7 @@ To train on 50-node TSP instances, use the provided SLURM batch script:
 Train50.sh
 ```
 ----
-### Inference Command
+- ### Inference Command
 Run inference using a trained model (e.g., for V):
 ```
 python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.1_shift_-1_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50
@@ -102,7 +102,7 @@ python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results
 ## TSP-100
 
 
-### Training
+- ### Training
 
 To train on 100-node TSP instances, use the provided SLURM batch script:
 
@@ -112,6 +112,7 @@ Train100.sh
 ----
 
 ### Inference Command
+- 
 
 <details>
   <summary>Click to expand more shifts on TSP-100 (w.r.t. V^k):
@@ -293,7 +294,15 @@ For TSP-50, run
 ```
 python HamiltonianCycleEnsemble.py all_tour_lengths_shift_-{1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39,41,43,47,49}_size_50.txt
 ```
-
+For TSP-100, run
 ```
 python HamiltonianCycleEnsemble.py all_tour_lengths_shift_-{1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39,41,43,47,49,51,53,57,59,61,63,67,69,71,73,77,79,81,83,87,89,91,93,97,99}_size_100.txt
 ```
+
+
+
+
+-----
+
+
+some code are adapted from utsp: https://github.com/yimengmin/UTSP and ordering clique: https://github.com/yimengmin/UnsupervisedOrderingMaximumClique
