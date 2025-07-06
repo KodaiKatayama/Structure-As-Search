@@ -3,7 +3,7 @@
 > A PyTorch implementation of **Structure-As-Search**, a fully unsupervised, non-autoregressive framework for solving the Traveling Salesman Problem (TSP).
 
 
-## TSP-50 Inference Demonstration
+## TSP-50 (default) Demonstration
 
 This example demonstrates inference on 50-node TSP instances using the **Structure-As-Search** model.
 
@@ -111,8 +111,8 @@ Train100.sh
 ```
 ----
 
-### Inference Command
-- 
+- ### Inference Command
+ 
 
 <details>
   <summary>Click to expand more shifts on TSP-100 (w.r.t. V^k):
@@ -281,6 +281,64 @@ python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_result
 
 </details>
 
+
+
+## TSP-20
+
+
+- ### Training
+
+To train on 20-node TSP instances, use the provided SLURM batch script:
+
+```bash
+Train20.sh
+```
+----
+
+- ### Inference Command
+
+
+<details>
+  <summary>Click to expand more shifts on TSP-100 (w.r.t. V^k):
+</summary>
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.05_shift_-1_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.05_shift_-3_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.01_shift_-7_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.3_shift_-9_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20 
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.3_shift_-11_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20 
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.01_shift_-13_dist_scale_5.0_n_layers2_seed_42.pt  --num_nodes 20
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.05_shift_-17_dist_scale_5.0_n_layers2_seed_42.pt --num_nodes 20
+```
+
+```
+python test.py   --test_data data/tsp_20_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_20_hidden_128_adam_tau_2.0_n_iter_60_noise_0.05_shift_-19_dist_scale_5.0_n_layers2_seed_42.pt  --num_nodes 20
+```
+
+
+</details>
+
+
+
 ## Run Hamiltonian Cycle Ensemble
 
 go to the dir which saves the inference results
@@ -298,9 +356,10 @@ For TSP-100, run
 ```
 python HamiltonianCycleEnsemble.py all_tour_lengths_shift_-{1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39,41,43,47,49,51,53,57,59,61,63,67,69,71,73,77,79,81,83,87,89,91,93,97,99}_size_100.txt
 ```
-
-
-
+For TSP-20, run
+```
+python HamiltonianCycleEnsemble.py  all_tour_lengths_shift_-{1,3,7,9,11,13,17,19}_size_20.txt
+```
 
 -----
 
