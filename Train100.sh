@@ -21,13 +21,16 @@ for TAU in "${TAU_VALUES[@]}"; do
     echo "Running with tau=${TAU}, n_iter=${N_ITER}"
     sbatch <<EOF
 #!/bin/bash
-#SBATCH --qos=low
-#SBATCH --job-name=100Deep_shift${SHIFT}_tau${TAU}_iter${N_ITER}_NS_${NOISE_SCALE}
-#SBATCH --mem=80G
-#SBATCH --time=7-00:00:00
-#SBATCH -p full
-#SBATCH --gres=gpu:1
-#SBATCH -o ${OUTPUT_FILE}
+
+# ===== Customize your SLURM configuration below =====
+# #SBATCH --job-name=...
+# #SBATCH --mem=...
+# #SBATCH --time=...
+# #SBATCH -p ...
+# #SBATCH --gres=gpu:...
+# #SBATCH -o ...
+# ================================================
+
 cd ${BASE_DIR}
 python -u ${SCRIPT}  --lr ${LR}  --epochs ${EPOCHS} --distance_scale 5.0\
      --n_iter ${N_ITER} --tau ${TAU} --noise_scale ${NOISE_SCALE} --seed 42 \

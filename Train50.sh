@@ -5,7 +5,6 @@ NUM_OF_NODES=50
 LR=2e-3
 EPOCHS=600
 NLAYERS=4
-#NOISE_SCALE=0.05
 N_ITER=80
 SHIFT=-1   # corresponds to coprime k=1 for V^k
 TAU_VALUES=(5.0 4.0 3.0 2.0)
@@ -20,16 +19,18 @@ for TAU in "${TAU_VALUES[@]}"; do
     echo "Running with tau=${TAU}, n_iter=${N_ITER}"
     sbatch <<EOF
 #!/bin/bash
-#SBATCH --qos=high
-#SBATCH --job-name=50Deep_shift${SHIFT}_tau${TAU}_iter${N_ITER}_NS_${NOISE_SCALE}
-#SBATCH --mem=80G
-#SBATCH --time=3-00:00:00
-#SBATCH -p full
-#SBATCH --gres=gpu:1
-#SBATCH -o ${OUTPUT_FILE}
-# >>> Conda initialization (required in batch scripts) >>>
-source ~/anaconda3/etc/profile.d/conda.sh
-conda activate linear_assignment_cuda_env
+
+# ===== Customize your SLURM configuration below =====
+# #SBATCH --job-name=...
+# #SBATCH --mem=...
+# #SBATCH --time=...
+# #SBATCH -p ...
+# #SBATCH --gres=gpu:...
+# #SBATCH -o ...
+# ================================================
+
+
+
 cd ${BASE_DIR}
 python -u ${SCRIPT}  --lr ${LR}  --epochs ${EPOCHS} --distance_scale 5.0\
      --n_iter ${N_ITER} --tau ${TAU} --noise_scale ${NOISE_SCALE} --seed 42 \
@@ -40,7 +41,6 @@ python -u ${SCRIPT}  --lr ${LR}  --epochs ${EPOCHS} --distance_scale 5.0\
     --visualize --viz_freq 30 \
     --train_data data/tsp_${NUM_OF_NODES}_uniform_train.pt \
     --val_data data/tsp_${NUM_OF_NODES}_uniform_val.pt --hidden_dim 256 --shift ${SHIFT} --n_layers ${NLAYERS}
-conda deactivate
 EOF
 
   done
