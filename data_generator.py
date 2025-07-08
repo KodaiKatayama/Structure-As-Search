@@ -35,42 +35,6 @@ def coords_to_distance_matrix(coordinates):
     distance_matrix = torch.cdist(coordinates, coordinates)
     return distance_matrix
 
-def coords_to_adjacency_knn(coordinates, k=8):
-    """
-    Convert coordinates to k-NN adjacency matrix
-    
-    Args:
-        coordinates: (B, N, 2) coordinate tensor
-        k: number of nearest neighbors
-    
-    Returns:
-        adjacency_matrices: (B, N, N) adjacency tensor
-    """
-    batch_size, n_cities = coordinates.shape[:2]
-    
-    # Compute distance matrices
-    distance_matrices = coords_to_distance_matrix(coordinates)
-    
-    adjacency_matrices = torch.zeros_like(distance_matrices)
-    
-    for b in range(batch_size):
-        dist_matrix = distance_matrices[b]
-        
-        # Find k nearest neighbors for each city
-        _, knn_indices = torch.topk(dist_matrix, k=min(k+1, n_cities), largest=False, dim=1)
-        knn_indices = knn_indices[:, 1:]  # Remove self-connections
-        
-        # Create adjacency matrix
-        adj = torch.zeros(n_cities, n_cities)
-        for i in range(n_cities):
-            for j in knn_indices[i]:
-                adj[i, j] = 1.0
-                adj[j, i] = 1.0  # Make symmetric
-        
-        adjacency_matrices[b] = adj
-    
-    return adjacency_matrices
-
 def save_tsp_dataset(coordinates, filepath, metadata=None):
     """
     Save TSP dataset to file
@@ -179,7 +143,7 @@ def create_standard_datasets():
     print("=== Creating Standard TSP Datasets (2 features only) ===")
     
     # Parameters
-    num_cities = 50
+    num_cities = 100
     coord_range = 100.0
     
     # Create train set
