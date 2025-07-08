@@ -3,6 +3,18 @@
 > A PyTorch implementation of **Structure-As-Search**, a fully unsupervised, non-autoregressive framework for solving the Traveling Salesman Problem (TSP).
 
 
+## Installation & Dependencies
+
+- ### Required Dependencies
+Before running the code, ensure you have installed the torch-linear-assignment: https://www.piwheels.org/project/torch-linear-assignment. I am using Version 0.0.3.
+
+
+
+
+- ### Important Training Note
+⚠️ **Mixed precision training can cause problems during inference.** If you encounter issues during inference, consider disabling mixed precision training.
+
+
 ## TSP-50 (default) Demonstration
 
 This example demonstrates inference on 50-node TSP instances using the **Structure-As-Search** model.
