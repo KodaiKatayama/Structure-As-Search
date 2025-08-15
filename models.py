@@ -4,36 +4,67 @@ from torch import nn
 from diff_module import scattering_diffusion, GCN_diffusion  # Ensure these are correctly imported
 #from sinkhorn import  gumbel_sinkhorn
 
-def gumbel_sinkhorn(log_alpha, tau=1.0, n_iter=20,noise_scale=1.0):
-    """Stable Gumbel-Sinkhorn with better scaling"""
+
+@torch.compile
+def fast_sinkhorn_step(Z):
+    # Row normalization
+    Z = Z - torch.logsumexp(Z, dim=-1, keepdim=True)
+    # Column normalization
+    Z = Z - torch.logsumexp(Z, dim=-2, keepdim=True)
+    return Z
+
+
+def gumbel_sinkhorn(log_alpha, tau=1.0, n_iter=20, noise_scale=1.0):
+    # ... initialization ...
     B, N, _ = log_alpha.size()
-
-    # Scale and center the input logits
-    # log_alpha = log_alpha * 0.01  # Scale down
-    # log_alpha = log_alpha - log_alpha.mean(dim=(1,2), keepdim=True)
-
+    
     # Add Gumbel noise
     noise = -torch.log(-torch.log(torch.rand(log_alpha.shape, device=log_alpha.device) + 1e-20) + 1e-20)
-    noise = noise*noise_scale   # Scale noise too
-
-    # Initialize the iteration
-    Zinit = (log_alpha + noise) / tau
-    Z = Zinit
-
+    noise = noise * noise_scale
+    
+    Z = (log_alpha + noise) / tau    
     for _ in range(n_iter):
-        # Row normalization
-        Z = Z - torch.logsumexp(Z, dim=-1, keepdim=True)
-        # Column normalization
-        Z = Z - torch.logsumexp(Z, dim=-2, keepdim=True)
-
-    # Get probabilities
+        Z = fast_sinkhorn_step(Z)
+    
     P = torch.exp(Z)
-
     # Ensure exact normalization
     P = P / P.sum(dim=-1, keepdim=True)
     P = P / P.sum(dim=-2, keepdim=True)
+    return P, (log_alpha + noise) / tau
 
-    return P,Zinit
+
+
+
+#def gumbel_sinkhorn(log_alpha, tau=1.0, n_iter=20,noise_scale=1.0):
+#    """Stable Gumbel-Sinkhorn with better scaling"""
+#    B, N, _ = log_alpha.size()
+#
+#    # Scale and center the input logits
+#    # log_alpha = log_alpha * 0.01  # Scale down
+#    # log_alpha = log_alpha - log_alpha.mean(dim=(1,2), keepdim=True)
+#
+#    # Add Gumbel noise
+#    noise = -torch.log(-torch.log(torch.rand(log_alpha.shape, device=log_alpha.device) + 1e-20) + 1e-20)
+#    noise = noise*noise_scale   # Scale noise too
+#
+#    # Initialize the iteration
+#    Zinit = (log_alpha + noise) / tau
+#    Z = Zinit
+#
+#    for _ in range(n_iter):
+#        # Row normalization
+#        Z = Z - torch.logsumexp(Z, dim=-1, keepdim=True)
+#        # Column normalization
+#        Z = Z - torch.logsumexp(Z, dim=-2, keepdim=True)
+#
+#    # Get probabilities
+#    P = torch.exp(Z)
+#
+#    # Ensure exact normalization
+#    P = P / P.sum(dim=-1, keepdim=True)
+#    P = P / P.sum(dim=-2, keepdim=True)
+#
+#    return P,Zinit
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 class SCTConv(nn.Module):
@@ -134,5 +165,6 @@ class GNN(nn.Module):
             noise = noise*self.noise_scale   # Scale noise too
             Zinit = (logits + noise) / self.tau
             return Zinit
+
         
         

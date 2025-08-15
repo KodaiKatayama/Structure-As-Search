@@ -3,6 +3,48 @@ import numpy as np
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+#def GCN_diffusion(W, order, feature):
+#    """
+#    W: [batchsize, n, n]
+#    feature: [batchsize, n, n]
+#    """
+#    identity_matrices = torch.eye(W.size(1)).repeat(W.size(0), 1, 1).to(device)
+#    A_gcn = W + identity_matrices
+#    degrees = torch.sum(A_gcn, dim=2).unsqueeze(dim=2)
+#    D = torch.pow(degrees, -0.5)
+#    
+#    gcn_diffusion_list = []
+#    A_gcn_feature = feature
+#    for i in range(order):
+#        A_gcn_feature = D * A_gcn_feature
+#        A_gcn_feature = torch.matmul(A_gcn, A_gcn_feature)
+#        A_gcn_feature = torch.mul(A_gcn_feature, D)
+#        gcn_diffusion_list.append(A_gcn_feature)
+#    
+#    return gcn_diffusion_list
+
+
+#def GCN_diffusion(W, order, feature):
+#    """
+#    W: [batchsize, n, n]
+#    feature: [batchsize, n, n]
+#    """
+#    identity_matrices = torch.eye(W.size(1)).repeat(W.size(0), 1, 1).to(device)
+#    A_gcn = W + identity_matrices
+#    degrees = torch.sum(A_gcn, dim=2).unsqueeze(dim=2)
+#    D = torch.pow(degrees, -0.5)
+#
+#    feature_p = feature
+#    gcn_diffusion_list = []
+#    for i in range(order):
+#        D_feature = D * feature_p
+#        A_gcn_D_feature = torch.matmul(A_gcn, D_feature)
+#        feature_p = torch.mul(A_gcn_D_feature, D)
+#        gcn_diffusion_list.append(feature_p)
+#
+#    return tuple(gcn_diffusion_list)
+
+
 def GCN_diffusion(W, order, feature, device):
     """
     Perform GCN diffusion with memory optimization.
@@ -39,6 +81,45 @@ def GCN_diffusion(W, order, feature, device):
         gcn_diffusion_list.append(feature_p)
 
     return tuple(gcn_diffusion_list)
+#
+## Example usage
+#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#batchsize, n = 32, 100
+#W = torch.rand(batchsize, n, n, device=device)
+#feature = torch.rand(batchsize, n, n, device=device)
+#order = 3
+#
+#diffusion_results = GCN_diffusion(W, order, feature, device)
+#
+#print(f"Number of diffusion steps: {len(diffusion_results)}")
+#for i, result in enumerate(diffusion_results):
+#    print(f"Shape of diffusion result {i}: {result.shape}")
+#
+
+#def SCT1stv2(W, order, feature):
+#    """
+#    W: [batchsize, n, n]
+#    feature: [batchsize, n, n]
+#    """
+#    degrees = torch.sum(W, dim=2).unsqueeze(dim=2)
+#    D = torch.pow(degrees, -1)
+#    iteration = 2 ** order
+#    scale_list = [2 ** i - 1 for i in range(order + 1)]
+#    
+#    feature_p = feature
+#    sct_diffusion_list = []
+#    for i in range(iteration):
+#        D_inv_x = D * feature_p
+#        W_D_inv_x = torch.matmul(W, D_inv_x)
+#        feature_p = 0.5 * feature_p + 0.5 * W_D_inv_x
+#        if i in scale_list:
+#            sct_diffusion_list.append(feature_p)
+#    
+#    sct_features = [sct_diffusion_list[i] - sct_diffusion_list[i+1] for i in range(len(scale_list) - 1)]
+#    
+#    return tuple(sct_features)
+#
+
 
 def SCT1stv2(W, order, feature, device):
     """
