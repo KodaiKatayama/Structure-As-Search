@@ -413,7 +413,7 @@ def main():
     parser.add_argument('--num_nodes', type=int, default=None,
                        help='Number of nodes (cities) in TSP instances. If not specified, will use value from model checkpoint')
 
-    parser.add_argument('--override_noise_scale', type=float, default=0.5,
+    parser.add_argument('--override_noise_scale', type=float, default=None,
             help='Override noise scale factor (use model default if None--- not specified)')
 
 
