@@ -1,5 +1,8 @@
 import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+'''
+Warning: Results produced on NVIDIA V100 GPUs may differ from those on newer A100 or H100 GPUs, even when running the same code with the same inputs. This is due to architectural and default precision differences—A100 and H100 introduce TensorFloat-32 (TF32) for FP32 matrix multiplications, support bfloat16, and often use different fused-kernel implementations than V100. These changes can alter rounding, accumulation order, and numerical precision, which can lead to small but noticeable output differences. If strict reproducibility across GPU types is required, you should disable TF32, fix precision modes, and enforce deterministic algorithms.
+'''
 
 # Optional: enable faster matmuls on NVIDIA (keeps accuracy for GNN-ish ops)
 if torch.cuda.is_available():
