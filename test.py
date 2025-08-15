@@ -13,11 +13,33 @@ import time
 from tqdm import tqdm
 
 # Import modules
+
 from models import GNN
 from data_generator import SimpleTSPDataset, SimpleTSPDataLoader, load_tsp_dataset
 from hardpermutation import to_exact_permutation_batched
 from tsp_visualization import visualize_batch_tours, compute_tour_length, extract_tour_from_heatmap
-from utsploss import tsp_permutation_loss
+
+def tsp_permutation_loss(nn_output, distance_matrix, shift=-1):
+    """
+    Compute TSP tour length from permutation matrix and distance matrix
+    
+    Args:
+        nn_output: (B, N, N) permutation matrices
+        distance_matrix: (B, N, N) distance matrices
+        shift: integer shift parameter for rolling the transpose matrix
+        
+    Returns:
+        tour_lengths: (B,) tour lengths for each instance
+        heat_map: (B, N, N) heat maps (P V P^T)
+    """
+    # Create heat map using matrix multiplication with rolled transpose
+    heat_map = torch.matmul(nn_output, torch.roll(torch.transpose(nn_output, 1, 2), shift, 1))
+    
+    # Calculate weighted path length
+    weighted_path = torch.mul(heat_map, distance_matrix)
+    weighted_path = weighted_path.sum(dim=(1,2))
+    
+    return weighted_path, heat_map
 
 def load_model(model_path, device, num_nodes=None):
     """Load trained model from checkpoint"""
@@ -31,7 +53,7 @@ def load_model(model_path, device, num_nodes=None):
     print(f"Shift parameter: {getattr(args, 'shift', -1)}")
     print(f"Distance scaling factor: {getattr(args, 'distance_scale', 5.0)}")
     print(f"Number of layers: {getattr(args, 'n_layers', 2)}")
-
+    
     # Determine output dimension (number of nodes)
     if num_nodes is not None:
         output_dim = num_nodes
@@ -384,13 +406,17 @@ def main():
                        help='Path to trained model checkpoint')
     parser.add_argument('--test_data', type=str, default='data/tsp_50_uniform_test.pt',
                        help='Path to test dataset')
-    parser.add_argument('--batch_size', type=int, default=64,
+    parser.add_argument('--batch_size', type=int, default=256,
                        help='Batch size for testing')
     parser.add_argument('--device', type=str, default='cuda',
                        help='Device to run on')
     parser.add_argument('--num_nodes', type=int, default=None,
                        help='Number of nodes (cities) in TSP instances. If not specified, will use value from model checkpoint')
-    
+
+    parser.add_argument('--override_noise_scale', type=float, default=0.5,
+            help='Override noise scale factor (use model default if None--- not specified)')
+
+
     # Override parameters (optional - will use model's saved parameters by default)
     parser.add_argument('--override_shift', type=int, default=None,
                        help='Override shift parameter (use model default if not specified)')
@@ -418,7 +444,11 @@ def main():
     
     # Load model
     model, model_args = load_model(args.model_path, device, args.num_nodes)
-    
+
+    if args.override_noise_scale is not None:
+        print(f"Overriding noise_scale: {model_args.noise_scale} -> {args.override_noise_scale}")
+        model_args.noise_scale = args.override_noise_scale
+
     # Get parameters from model args (with optional overrides)
     shift = args.override_shift if args.override_shift is not None else getattr(model_args, 'shift', -1)
     distance_scale = (args.override_distance_scale if args.override_distance_scale is not None 
@@ -459,9 +489,16 @@ def main():
                                   shift=shift, distance_scale=distance_scale)
 
     # Save model tour lengths
+    save_dir_with_noise = (
+        os.path.join(args.save_dir, f"noise_{args.override_noise_scale}")
+        if args.override_noise_scale is not None
+        else args.save_dir
+    )
+    os.makedirs(save_dir_with_noise, exist_ok=True) 
     model_tour_lengths_file = save_tour_lengths(
         model_results['tour_lengths'], 
-        args.save_dir, 
+        #args.save_dir, 
+        save_dir_with_noise,
         'all_tour_lengths', 
         shift, 
         actual_num_nodes,
