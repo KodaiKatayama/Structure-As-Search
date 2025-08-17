@@ -34,7 +34,6 @@ def coords_to_distance_matrix(coordinates):
     # coordinates: (B, N, 2) -> distance_matrix: (B, N, N)
     distance_matrix = torch.cdist(coordinates, coordinates)
     return distance_matrix
-
 def save_tsp_dataset(coordinates, filepath, metadata=None):
     """
     Save TSP dataset to file
@@ -143,13 +142,13 @@ def create_standard_datasets():
     print("=== Creating Standard TSP Datasets (2 features only) ===")
     
     # Parameters
-    num_cities = 100
+    num_cities = 20
     coord_range = 100.0
     
     # Create train set
     print("\n1. Generating training set...")
     train_coords = generate_tsp_data(
-        num_instances=300000,  # Reduced for challenging distributions, 100000 for 20,50, 300000 for 100
+        num_instances=100000,  # Reduced for challenging distributions, 100000 for 20, 50,0000 for 50, 1500000 for 100
         num_cities=num_cities,
         coord_range=coord_range,
         seed=42
@@ -218,7 +217,7 @@ if __name__ == "__main__":
     train_coords, val_coords, test_coords = create_standard_datasets()
     
     # Test loading
-    test_dataset_loading()
+    # test_dataset_loading()
     
     # Show final stats
     print(f"\n=== Final Dataset Statistics ===")
