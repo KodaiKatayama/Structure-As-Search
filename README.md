@@ -39,76 +39,88 @@ Train50.sh
 - ### Inference Command
 Run inference using a trained model (e.g., for V):
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.1_shift_-1_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.3_shift_-1_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 Run inference using a trained model (e.g., for V^3):
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.005_shift_-3_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-3_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 <details>
   <summary>Click to expand more shifts on TSP-50 (w.r.t. V^k):
 </summary>
   
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.2_shift_-7_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.005_shift_-7_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-9_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.2_shift_-9_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.01_shift_-11_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.1_shift_-11_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.005_shift_-13_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.1_shift_-13_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.005_shift_-17_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.005_shift_-19_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.1_shift_-21_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.01_shift_-23_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.2_shift_-17_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.01_shift_-27_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.005_shift_-29_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.01_shift_-31_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
-```
-```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.2_shift_-33_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.2_shift_-19_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
 
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.05_shift_-37_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.01_shift_-21_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.05_shift_-39_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-23_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_4.0_n_iter_80_noise_0.1_shift_-41_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-27_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.05_shift_-43_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-29_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.01_shift_-47_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-31_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
 ```
-python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_3.0_n_iter_80_noise_0.01_shift_-49_dist_scale_5.0_n_layers4_seed_42.pt --num_nodes 50 
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.1_shift_-33_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
 ```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.1_shift_-37_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.05_shift_-39_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.01_shift_-41_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.005_shift_-43_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.2_shift_-47_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
+```
+python test.py   --test_data data/tsp_50_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_50_hidden_256_adam_tau_5.0_n_iter_80_noise_0.005_shift_-49_dist_scale_5.0_n_layers6_seed_42.pt --num_nodes 50 --compute_greedy
+```
+
 </details>
 
 ## TSP-100
