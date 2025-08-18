@@ -1,0 +1,31 @@
+SCT TSP Model Test Results
+==================================================
+
+Model: SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.2_shift_-91_dist_scale_5.0_n_layers4_seed_42.pt
+Test Data: data/tsp_100_uniform_test.pt
+Distribution: uniform
+Device: cpu
+Number of nodes: 100
+Shift parameter: -91
+Distance scaling factor: 5.0
+
+Model Architecture:
+  Hidden dim: 512
+  Output dim: 100
+  Layers: 4
+  SCT order: 6
+  GCN order: 2
+  Tau: 5.0
+  N_iter: 80
+  Noise scale: 0.2
+  Shift: -91
+  Distance scale: 5.0
+
+Test Results:
+  Total instances: 1,000
+  Mean tour length: 874.8166
+  Std tour length: 42.5638
+  Median tour length: 872.1979
+  Min tour length: 762.2667
+  Max tour length: 1100.7769
+  Avg inference time: 0.2907s
