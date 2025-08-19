@@ -350,6 +350,10 @@ For TSP-20, run
 python HamiltonianCycleEnsemble.py  all_tour_lengths_shift_-{1,3,7,9,11,13,17,19}_size_20.txt
 ```
 
+Randomness by Hardware Perturbation Inference,run
+```
+python HamiltonianCycleEnsemble.py all_tour_lengths_shift_-{1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39,41,43,47,49,51,53,57,59,61,63,67,69,71,73,77,79,81,83,87,89,91,93,97,99}_size_100.txt Faster_HPI_all_tour_lengths_shift_-{1,3,7,9,11,13,17,19,21,23,27,29,31,33,37,39,41,43,47,49,51,53,57,59,61,63,67,69,71,73,77,79,81,83,87,89,91,93,97,99}_size_100.txt
+```
 -----
 
 

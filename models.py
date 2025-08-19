@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 from torch import nn
 from diff_module import scattering_diffusion, GCN_diffusion  # Ensure these are correctly imported
+#from Faster_HPI_diff_module import scattering_diffusion, GCN_diffusion  # TF32 / bfloat16
 #from sinkhorn import  gumbel_sinkhorn
 
 
