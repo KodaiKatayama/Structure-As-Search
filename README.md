@@ -143,6 +143,7 @@ Train100.sh
 <details>
   <summary>Click to expand more shifts on TSP-100 (w.r.t. V^k):
 </summary>
+
 ```
 python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.3_shift_-1_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100  
 ```
