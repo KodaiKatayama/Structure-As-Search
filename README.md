@@ -244,7 +244,7 @@ python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_result
 python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.3_shift_-81_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
 ```
 ```
-python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.1_shift_-83_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
+python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.2_shift_-83_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
 ```
 ```
 python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.3_shift_-87_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
@@ -256,7 +256,7 @@ python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_result
 python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.2_shift_-91_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
 ```
 ```
-python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.3_shift_-93_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
+python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.2_shift_-93_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
 ```
 ```
 python test.py   --test_data data/tsp_100_uniform_test.pt --save_dir test_results_shift --model_path SaveModels/best_stable_sct_model_size_100_hidden_512_adam_tau_5.0_n_iter_80_noise_0.1_shift_-97_dist_scale_5.0_n_layers8_seed_42.pt --num_nodes 100
