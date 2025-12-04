@@ -1,0 +1,150 @@
+============================================================
+TESTING ON SMALL EXAMPLE
+============================================================
+5-city distance matrix:
+[[0.   5.02 8.24 3.28 3.32]
+ [5.02 0.   7.26 7.25 1.71]
+ [8.24 7.26 0.   7.17 7.09]
+ [3.28 7.25 7.17 0.   5.66]
+ [3.32 1.71 7.09 5.66 0.  ]]
+
+Beam width  1: cost = 26.144, path = [0 3 4 1 2]
+Beam width  2: cost = 26.144, path = [0 3 4 1 2]
+Beam width  4: cost = 22.735, path = [0 4 1 2 3]
+Beam width  8: cost = 22.735, path = [0 4 1 2 3]
+Beam width 16: cost = 22.735, path = [0 3 2 1 4]
+
+This should show clear improvement with larger beam widths!
+============================================================
+Loading TSP dataset from: ../data/tsp_100_uniform_test.pt
+Dataset: 1000 instances, 100 cities each
+Computing distance matrices...
+
+==================================================
+Testing Beam Width: 5000
+==================================================
+  Processing instance 1/1000
+  Processing instance 21/1000
+  Processing instance 41/1000
+  Processing instance 61/1000
+  Processing instance 81/1000
+  Processing instance 101/1000
+  Processing instance 121/1000
+  Processing instance 141/1000
+  Processing instance 161/1000
+  Processing instance 181/1000
+  Processing instance 201/1000
+  Processing instance 221/1000
+  Processing instance 241/1000
+  Processing instance 261/1000
+  Processing instance 281/1000
+  Processing instance 301/1000
+  Processing instance 321/1000
+  Processing instance 341/1000
+  Processing instance 361/1000
+  Processing instance 381/1000
+  Processing instance 401/1000
+  Processing instance 421/1000
+  Processing instance 441/1000
+  Processing instance 461/1000
+  Processing instance 481/1000
+  Processing instance 501/1000
+  Processing instance 521/1000
+  Processing instance 541/1000
+  Processing instance 561/1000
+  Processing instance 581/1000
+  Processing instance 601/1000
+  Processing instance 621/1000
+  Processing instance 641/1000
+  Processing instance 661/1000
+  Processing instance 681/1000
+  Processing instance 701/1000
+  Processing instance 721/1000
+  Processing instance 741/1000
+  Processing instance 761/1000
+  Processing instance 781/1000
+  Processing instance 801/1000
+  Processing instance 821/1000
+  Processing instance 841/1000
+  Processing instance 861/1000
+  Processing instance 881/1000
+  Processing instance 901/1000
+  Processing instance 921/1000
+  Processing instance 941/1000
+  Processing instance 961/1000
+  Processing instance 981/1000
+Average cost: 977.3405
+Time per instance: 148.3540s
+
+==================================================
+Testing Beam Width: 10000
+==================================================
+  Processing instance 1/1000
+  Processing instance 21/1000
+  Processing instance 41/1000
+  Processing instance 61/1000
+  Processing instance 81/1000
+  Processing instance 101/1000
+  Processing instance 121/1000
+  Processing instance 141/1000
+  Processing instance 161/1000
+  Processing instance 181/1000
+  Processing instance 201/1000
+  Processing instance 221/1000
+  Processing instance 241/1000
+  Processing instance 261/1000
+  Processing instance 281/1000
+  Processing instance 301/1000
+  Processing instance 321/1000
+  Processing instance 341/1000
+  Processing instance 361/1000
+  Processing instance 381/1000
+  Processing instance 401/1000
+  Processing instance 421/1000
+  Processing instance 441/1000
+  Processing instance 461/1000
+  Processing instance 481/1000
+  Processing instance 501/1000
+  Processing instance 521/1000
+  Processing instance 541/1000
+  Processing instance 561/1000
+  Processing instance 581/1000
+  Processing instance 601/1000
+  Processing instance 621/1000
+  Processing instance 641/1000
+  Processing instance 661/1000
+  Processing instance 681/1000
+  Processing instance 701/1000
+  Processing instance 721/1000
+  Processing instance 741/1000
+  Processing instance 761/1000
+  Processing instance 781/1000
+  Processing instance 801/1000
+  Processing instance 821/1000
+  Processing instance 841/1000
+  Processing instance 861/1000
+  Processing instance 881/1000
+  Processing instance 901/1000
+  Processing instance 921/1000
+  Processing instance 941/1000
+  Processing instance 961/1000
+  Processing instance 981/1000
+Average cost: 970.6215
+Time per instance: 323.8438s
+
+================================================================================
+CORRECTED BEAM SEARCH TSP PERFORMANCE COMPARISON
+================================================================================
+Beam Width   Avg Cost     Std Dev      Min Cost     Max Cost     Time/Inst   
+--------------------------------------------------------------------------------
+5000         977.3405     56.0017      821.9884     1169.5808    148.3540    
+10000        970.6215     55.4266      815.1234     1154.3584    323.8438    
+================================================================================
+
+Analysis:
+Best average cost: 970.6215 (beam width 10000)
+Improvement from smallest to best beam: 0.69%
+Cost range: 970.6215 - 977.3405
+Time range: 148.3540s - 323.8438s
+Step-wise improvements: ['0.687%']
+Beam search is working correctly - consistent improvement with larger beams!

@@ -132,7 +132,7 @@ def main():
     Main function to run Christofides baseline on TSP dataset
     """
     # Load and process the dataset
-    dataset_path = '../data/tsp_200_uniform_test.pt'
+    dataset_path = '../data/tsp_100_uniform_test.pt'
     
     if not os.path.exists(dataset_path):
         print(f"Dataset file not found: {dataset_path}")
