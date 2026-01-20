@@ -335,7 +335,12 @@ def main():
     set_seed(args.seed)
     print(f"Using seed: {args.seed}")
 
-    device = torch.device(args.device if torch.cuda.is_available() else 'cpu')
+    if torch.cuda.is_available():
+        device = torch.device('cuda')
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        device = torch.device('mps')
+    else:
+        device = torch.device('cpu')
     print(f"Using device: {device}")
 
     # Load datasets
