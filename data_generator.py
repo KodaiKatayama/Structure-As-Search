@@ -7,6 +7,7 @@ import torch
 import numpy as np
 import os
 
+# 問題数と都市数、座標範囲、シードを指定してTSPデータを生成
 def generate_tsp_data(num_instances, num_cities, coord_range=100.0, seed=None):
     """
     Generate random TSP instances with just coordinates
@@ -29,11 +30,14 @@ def generate_tsp_data(num_instances, num_cities, coord_range=100.0, seed=None):
     
     return coordinates
 
+# 座標を距離行列に変換
 def coords_to_distance_matrix(coordinates):
     """Convert coordinates to distance matrix"""
     # coordinates: (B, N, 2) -> distance_matrix: (B, N, N)
     distance_matrix = torch.cdist(coordinates, coordinates)
     return distance_matrix
+
+# データセットをファイルに保存する関数
 def save_tsp_dataset(coordinates, filepath, metadata=None):
     """
     Save TSP dataset to file
@@ -43,6 +47,7 @@ def save_tsp_dataset(coordinates, filepath, metadata=None):
         filepath: Path to save file
         metadata: Optional metadata dictionary
     """
+    #　保存先のディレクトリを作成
     # Ensure directory exists
     os.makedirs(os.path.dirname(filepath) if os.path.dirname(filepath) else '.', exist_ok=True)
     
@@ -53,7 +58,8 @@ def save_tsp_dataset(coordinates, filepath, metadata=None):
         'num_cities': coordinates.shape[1],
         'coord_range': coordinates.max().item()
     }
-    
+
+    # .update(): 辞書のメソッドで、引数の辞書の内容を現在の辞書にマージ
     if metadata:
         save_data.update(metadata)
     
@@ -63,6 +69,7 @@ def save_tsp_dataset(coordinates, filepath, metadata=None):
     print(f"Dataset saved to: {filepath}")
     print(f"Shape: {coordinates.shape}")
     print(f"Instances: {coordinates.shape[0]}, Cities: {coordinates.shape[1]}")
+
 
 def load_tsp_dataset(filepath):
     """
@@ -78,6 +85,7 @@ def load_tsp_dataset(filepath):
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"Dataset file not found: {filepath}")
     
+    # weights_only=Falseは計算に使う純粋なデータだけをロードするため？
     data = torch.load(filepath, weights_only=False)
     coordinates = data['coordinates']
     
@@ -87,6 +95,7 @@ def load_tsp_dataset(filepath):
     
     return coordinates, data
 
+# シンプルなデータセットクラス
 class SimpleTSPDataset:
     """
     Simple dataset class that only returns coordinate tensors
@@ -113,6 +122,7 @@ class SimpleTSPDataset:
         """Get a batch of coordinate tensors"""
         return self.coordinates[indices]  # (batch_size, N, 2)
 
+# データセットとバッチサイズ、シャッフルオプションを受け取るシンプルなデータローダークラス
 class SimpleTSPDataLoader:
     """Simple dataloader that returns coordinate tensors"""
     
@@ -123,6 +133,7 @@ class SimpleTSPDataLoader:
         self.num_samples = len(dataset)
         self.num_batches = (self.num_samples + batch_size - 1) // batch_size
     
+    # forループでバッチを生成
     def __iter__(self):
         if self.shuffle:
             indices = torch.randperm(self.num_samples)
@@ -136,6 +147,7 @@ class SimpleTSPDataLoader:
     def __len__(self):
         return self.num_batches
 
+# 都市数20, 座標範囲100.0でトレーニングセットを100000、バリデーションセット1000、テストセット1000を生成
 def create_standard_datasets():
     """Create standard train/val/test datasets"""
     
@@ -181,6 +193,7 @@ def create_standard_datasets():
     print("\n=== Dataset Creation Complete ===")
     return train_coords, val_coords, test_coords
 
+#データロードのテスト関数
 def test_dataset_loading():
     """Test loading and using the datasets"""
     print("\n=== Testing Dataset Loading ===")
@@ -212,6 +225,7 @@ def test_dataset_loading():
     
     print("\n✓ Dataset loading test passed!")
 
+# テスト用のメイン関数
 if __name__ == "__main__":
     # Create the datasets
     train_coords, val_coords, test_coords = create_standard_datasets()
