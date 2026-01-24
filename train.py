@@ -18,6 +18,7 @@ from hardpermutation import to_exact_permutation_batched
 from tsp_visualization import visualize_validation_tours, visualize_batch_tours
 import os
 
+# 各種シード設定
 # Ensure deterministic behavior
 def set_seed(seed=42):
     """Set seeds for reproducible results"""
@@ -28,6 +29,8 @@ def set_seed(seed=42):
     # torch.backends.cudnn.deterministic = True  # Slower but more deterministic
     # torch.backends.cudnn.benchmark = False
 
+
+# 設定を入力して、エポック数をスケジューラーに伝えたら学習率を返す
 # Advanced Learning Rate Schedulers
 class WarmupCosineScheduler:
     """Warmup + Cosine Annealing scheduler"""
@@ -52,6 +55,7 @@ class WarmupCosineScheduler:
         
         return lr
 
+# 設定してval_lossとmodelを渡すと早期終了を判定する
 class EarlyStopping:
     """Early stopping to prevent overfitting"""
     def __init__(self, patience=20, min_delta=0.001, restore_best_weights=True):
@@ -78,6 +82,7 @@ class EarlyStopping:
             return True
         return False
 
+# 勾配クリッピング
 class GradientClipper:
     """Adaptive gradient clipping"""
     def __init__(self, model, clip_percentile=10):
@@ -111,11 +116,15 @@ class GradientClipper:
             
         return current_norm
 
+
+# 保存場所の作成
 # Simple version
 if not os.path.exists('SaveModels/'):
     os.makedirs('SaveModels/')
+
 from utsploss import tsp_permutation_loss 
 
+# 最適化アルゴリズムの作成
 def create_optimizer(model, optimizer_type='adamw', lr=1e-3, weight_decay=1e-4):
     """Create optimizer with better defaults"""
     if optimizer_type.lower() == 'adamw':
@@ -139,6 +148,7 @@ def create_optimizer(model, optimizer_type='adamw', lr=1e-3, weight_decay=1e-4):
             return optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     else:
         return optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+
 
 def train_epoch(model, dataloader, optimizer, device, shift=-1, distance_scale=5.0, 
                 grad_clipper=None, use_mixed_precision=False, loss_smoothing=0.1):
