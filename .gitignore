@@ -1,0 +1,10 @@
+# Pythonのキャッシュファイル
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 仮想環境（ついでにこれも推奨）
+.venv/
+venv/
+env/
