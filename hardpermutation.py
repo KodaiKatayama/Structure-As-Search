@@ -2,6 +2,7 @@ import torch
 from scipy.optimize import linear_sum_assignment
 import numpy as np
 
+#ソフトな順列行列をハードな順列行列に変換する関数
 def to_exact_permutation(soft_perm_matrix, temperature=1.0):
     """
     Convert a soft permutation matrix to an exact permutation matrix.
@@ -41,6 +42,7 @@ def to_exact_permutation(soft_perm_matrix, temperature=1.0):
 
 from torch_linear_assignment import batch_linear_assignment, assignment_to_indices
 
+#ソフトな順列行列をハードな順列行列に変換する関数(高速版)
 def to_exact_permutation_batched(soft_perm_matrix, temperature=1.0):
     """
     Convert a soft permutation matrix to an exact permutation matrix using torch_linear_assignment.

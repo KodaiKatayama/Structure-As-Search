@@ -16,39 +16,39 @@ VRP_CAPACITIES = {
     100: 50
 }
 
-# VRPデータ生成関数
-def generate_vrp_data(num_instances, num_cities, coord_range=100.0, demand_range=(1,10), seed=None):
+# VRPデータ生成関数(デポの複製は行わない)
+def generate_vrp_data(num_instances, num_customers, coord_range=100.0, demand_range=(1,10), seed=None):
     """
     ランダムなVRPインスタンスを生成
     
     引数:
         num_instances: VRPインスタンスの数
-        num_cities: インスタンスあたりの都市数
+        num_customers: インスタンスあたりの顧客数
         coord_range: 座標範囲 [0, coord_range]
         demand_range: 需要の範囲を示すタプル (最小, 最大)
         seed: 再現性のためのランダムシード
     
     戻り値:
         depot_coordinates: (num_instances, 2) tensor
-        customer_coordinates: (num_instances, num_cities, 2) tensor
-        raw_demands: (num_instances, num_cities) tensor
-        normalized_demands: (num_instances, num_cities) tensor
+        customer_coordinates: (num_instances, num_customers, 2) tensor
+        raw_demands: (num_instances, num_customers) tensor
+        normalized_demands: (num_instances, num_customers) tensor (容量で正規化された需要)
         capacity: Vehicle capacity (scalar)
     """
     if seed is not None:
         torch.manual_seed(seed)
         np.random.seed(seed)
 
-    capacity = VRP_CAPACITIES.get(num_cities, 50)  # Default capacity if num_cities not in dict
+    capacity = VRP_CAPACITIES.get(num_customers, 50)  # Default capacity if num_customers not in dict
     
     # Generate random depot locations
     depot_coordinates = torch.rand(num_instances, 2) * coord_range
 
-    # Generate random coordinates for cities
-    customer_coordinates = torch.rand(num_instances, num_cities, 2) * coord_range
+    # Generate random coordinates for customers
+    customer_coordinates = torch.rand(num_instances, num_customers, 2) * coord_range
 
-    # Generate random demands for each city
-    raw_demands = torch.randint(demand_range[0], demand_range[1], (num_instances, num_cities)).float()
+    # Generate random demands for each customer
+    raw_demands = torch.randint(demand_range[0], demand_range[1], (num_instances, num_customers)).float()
     normalized_demands = raw_demands / capacity  # Normalize demands by capacity
     
     return {
@@ -89,7 +89,7 @@ def save_vrp_dataset(data_dict, filepath, metadata=None):
     torch.save(save_data, filepath)
     
     print(f"Dataset saved to: {filepath}")
-    print(f"Instances: {data_dict['depot_coordinates'].shape[0]}, Cities: {data_dict['customer_coordinates'].shape[1]}")
+    print(f"Instances: {data_dict['depot_coordinates'].shape[0]}, Customers: {data_dict['customer_coordinates'].shape[1]}")
     print(f"Capacity: {data_dict['capacity']}")
 
 # データセットをファイルからロードする関数
@@ -166,23 +166,23 @@ def create_standard_vrp_datasets():
     
     print("=== Creating Standard VRP Datasets ===")
     
-    num_cities = 20
+    num_customers = 20
     coord_range = 100.0
     
     # 訓練用
     print("\n1. Generating training set...")
-    train_data = generate_vrp_data(num_instances=100000, num_cities=num_cities, coord_range=coord_range, seed=42)
-    save_vrp_dataset(train_data, f'data/vrp_{num_cities}_train.pt', {'split': 'train'})
+    train_data = generate_vrp_data(num_instances=100000, num_customers=num_customers, coord_range=coord_range, seed=42)
+    save_vrp_dataset(train_data, f'data/vrp_{num_customers}_train.pt', {'split': 'train'})
     
     # 検証用
     print("\n2. Generating validation set...")
-    val_data = generate_vrp_data(num_instances=1000, num_cities=num_cities, coord_range=coord_range, seed=123)
-    save_vrp_dataset(val_data, f'data/vrp_{num_cities}_val.pt', {'split': 'val'})
+    val_data = generate_vrp_data(num_instances=1000, num_customers=num_customers, coord_range=coord_range, seed=123)
+    save_vrp_dataset(val_data, f'data/vrp_{num_customers}_val.pt', {'split': 'val'})
     
     # テスト用
     print("\n3. Generating test set...")
-    test_data = generate_vrp_data(num_instances=10000, num_cities=num_cities, coord_range=coord_range, seed=456)
-    save_vrp_dataset(test_data, f'data/vrp_{num_cities}_test.pt', {'split': 'test'})
+    test_data = generate_vrp_data(num_instances=10000, num_customers=num_customers, coord_range=coord_range, seed=456)
+    save_vrp_dataset(test_data, f'data/vrp_{num_customers}_test.pt', {'split': 'test'})
     
     print("\n=== Dataset Creation Complete ===")
     return train_data, val_data, test_data
@@ -192,7 +192,7 @@ def test_vrp_dataset_loading():
     print("\n=== Testing VRP Dataset Loading ===")
     
     # 1. データのロード
-    vrp_data_dict = load_vrp_dataset('data/vrp_20_train.pt')
+    vrp_data_dict = load_vrp_dataset(f'data/vrp_{num_customers}_train.pt')
     
     # 2. DatasetとDataLoaderの準備
     dataset = SimpleVRPDataset(vrp_data_dict[:100])
@@ -233,3 +233,22 @@ def test_vrp_dataset_loading():
             break
             
     print("\n✓ VRPデータセットのロードテストに成功しました！")
+
+if __name__ == "__main__":
+    # データセットの作成
+    train_data, val_data, test_data = create_standard_vrp_datasets()
+    
+    # ロードテスト（必要に応じてコメントアウトを解除してください）
+    # test_vrp_dataset_loading()
+    
+    # 最終的な統計情報の表示
+    print(f"\n=== Final Dataset Statistics ===")
+    print(f"Training set:   {train_data['customer_coordinates'].shape}")
+    print(f"Validation set: {val_data['customer_coordinates'].shape}")
+    print(f"Test set:       {test_data['customer_coordinates'].shape}")
+    print(f"Features per customer: 3 (x, y coordinates + normalized demand)")
+    print(f"Vehicle Capacity: {train_data['capacity']}")
+    
+    # 座標範囲の表示 (顧客座標から算出)
+    max_coord = train_data['customer_coordinates'].max().item()
+    print(f"Coordinate range: [0, {max_coord:.1f}]")

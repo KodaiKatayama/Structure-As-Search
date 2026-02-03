@@ -19,6 +19,7 @@ from data_generator import SimpleTSPDataset, SimpleTSPDataLoader, load_tsp_datas
 from hardpermutation import to_exact_permutation_batched
 from tsp_visualization import visualize_batch_tours, compute_tour_length, extract_tour_from_heatmap
 
+#ハードな順列行列と距離行列からTSPツアー長を計算する関数
 def tsp_permutation_loss(nn_output, distance_matrix, shift=-1):
     """
     Compute TSP tour length from permutation matrix and distance matrix
@@ -41,6 +42,7 @@ def tsp_permutation_loss(nn_output, distance_matrix, shift=-1):
     
     return weighted_path, heat_map
 
+# モデルをチェックポイントからロードする関数
 def load_model(model_path, device, num_nodes=None):
     """Load trained model from checkpoint"""
     print(f"Loading model from: {model_path}")
