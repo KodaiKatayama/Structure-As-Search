@@ -356,10 +356,22 @@ def main():
 
     # Load datasets
     print("Loading datasets...")
+    # 1. データをロード
     data_dict = torch.load(args.train_data, weights_only=False)
-    train_coords = data_dict['customer_coordinates']
     val_data_dict = torch.load(args.val_data, weights_only=False)
-    val_coords = val_data_dict['customer_coordinates']
+
+    num_vehicles = 5  # 車両台数（デポのコピー数）
+
+    def prepare_ktsp_coords(data):
+        # depot: (B, 1, 2) -> (B, 5, 2) にコピー
+        depot_expanded = data['depot_coordinates'].unsqueeze(1).expand(-1, num_vehicles, -1)
+        # customers: (B, 20, 2)
+        customers = data['customer_coordinates']
+        # 合体させて (B, 25, 2) にする
+        return torch.cat([depot_expanded, customers], dim=1)
+    
+    train_coords = prepare_ktsp_coords(data_dict)
+    val_coords = prepare_ktsp_coords(val_data_dict)
 
     # Create simple datasets (just coordinates)
     print("Creating datasets with coordinates only...")
